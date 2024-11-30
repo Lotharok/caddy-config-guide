@@ -17,7 +17,7 @@
 
 - Basic terminal / command line skills
 - Basic text editor skills
-- Do not have IIS running.
+- Do not be using port 443 with applications such as IIS or apache.
 
 ### Installation
 
@@ -78,6 +78,7 @@ C:\inetpub\caddy_2.9.0
 
 ```
 caddy version
+caddy run --config /path/to/Caddyfile
 ```
 
 ### Your first config
@@ -103,7 +104,7 @@ Save it in a file named Caddyfile (without extension) in the directory where you
 Now, with the Caddyfile already available, it is just a matter of running Caddy as a daemon. To do so, we must execute the following command from PowerShell ISE:
 
 ```sh
-$command = “C:\inetpub\caddy_2.9.0\caddy.exe run"
+$command = “C:\inetpub\caddy_2.9.0\caddy.exe run --config C:\inetpub\caddy_2.9.0\Caddyfile"
 Invoke-Expression $command
 ```
 
